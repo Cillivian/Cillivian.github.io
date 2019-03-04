@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于JS中数组的函数调用使用]]></title>
+    <url>%2F2019%2F03%2F04%2F%E5%85%B3%E4%BA%8EJS%E4%B8%AD%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[JavaScript数组ARRAY的操作 1.delete方法： delete删除的只是数组元素的值，所占的空间是并没有删除的 代码： 1234567var arr=[12,23,44,5,6,23,43,34];console.log(arr.length);console.log(arr);delete arr[1];console.log(arr);console.log(arr[1]);console.log(arr.length); 这个就很直观的看得出来，删除后，数组的长度前后是并没有变化的。被删除的元素位置还是留在那,读取到该下标元素的时候，元素的值为undefined 2.splice方法： 该方法删除数组指定的元素，并且可以给数组添加新的元素，即实现删除/替换数组的某项元素。splice(下标，删除的长度，替换的新元素) 1arr.splice(index,length,items,items,...); 注意：如果不添加item的时候，就是数组的删除，会改变原数组的长度 代码如下： 1234var arr=[12,23,44,5,6,23,43,34];console.log(arr.length);arr.splice(1,2);//从下标为1的元素开始删除，删除的长度为2即23，44两个数 console.log(arr);console.log(arr.length); 从运行结果中可以看得出来，原数组中的23，44两个元素被删除了，数组长度由原来的8变成了6 3.shift方法: 删除第一个数组元素，不带参数，数组的长度会减1,并且返回的是数组的第一个元素； 1arr.shift(); 注意:如果数组是空的，那么 shift() 方法将不进行任何操作，返回 undefined 值。请注意，该方法不创建新数组，而是直接修改原有的 arrayObject 4.pop方法: 删除数组的最后一个元素,数组的长度会减1,并且返回的是数组的最后一个元素(通过alert()可以查看出返回的是哪个值) 123456arr.pop();var arr=[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;,&apos;f&apos;];alert(arr.shift());arr.pop();alert(arr.pop());console.log(arr); 5.unshift()： 方法:在数组的第一个元素前面增加一个元素,数组的长度会加1，该方法会改变原来数组的长度. 1arr.unshift(newElement) 6.push(): 在数组的结尾追加元素,可以追加多个元素，该方法会改变原来数组的长度 1 arr.push(newElement,...); 注意：追加的元素最好是简单类型的字面量，不要是数组，如果是数组的，追加过来的元素会在该位置显示为一个数组，元素就会变成了二维数组，甚至多维数组 7.concat(): 合并两个或多个数组，该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本 1234567&lt;script type="text/javascript"&gt;var a = [1,2,3];document.write(a.concat(4,5));&lt;/script&gt;输出1,2,3,4,5 8.sort(): 该方法是对数组进行升序排序，规则是按ascii表的规则来的 1arr.sort(); 9.reverse(): 对数组进行翻转操作 arr.reverse(); js模拟原理实现的代码： 12345678910var arr = [&quot;诸葛亮&quot;,&quot;安琪拉&quot;,&quot;狄仁杰&quot;,&quot;后羿&quot;,&quot;荆轲&quot;,&quot;娜可露露&quot;,&quot;鲁班&quot;];//思路：实现方法：1.操作原数组，让原数组第一位和最后一个位调换位置，以此类推。for(var i=0;i&lt;arr.length/2;i++)&#123;//让前后数组中的元素交换位置。var temp = arr[i];//前面项和对应的后面项交换位置。（arr.length-1-i = 倒数第i+1项）arr[i] = arr[arr.length-1-i];arr[arr.length-1-i] = temp;&#125;console.log(arr); 10.isArray(obj): 该方法适用于确定传递的值是否为Array，是Array返回的则是true，否的话返回的是false 1234Array.isArray([1, 2, 3]); // trueArray.isArray(&#123;foo: 123&#125;); // falseArray.isArray(&quot;foobar&quot;); // falseArray.isArray(undefined); // false intanceof 同样也是检测使用的 语法：a instanceof Object 返回的值是true or false; 其他方法： 11.slice(): 从当前数组中截取一个新的数组，不影响原来的数组，参数start从0开始,end从1开始(从第一个元素开始) 1 arr.slice(star,end); 注意：如果slice里面没有定义结束的位置的话，那么截取的元素就从被截取元素的开始位置一直截取到结束位置 12.join()： 把数组转换成为字符串，可以自己定义分隔符 arr.join(&quot;自定义分隔符如&amp;&quot;)，默认是逗号隔开，如果要没有分隔符的话，就arr.join(&quot;&quot;); 13.toString(): 同样是把数组转成字符串，但是返回的字符串每项都是用逗号隔开的 14.split() : 把一个字符串分割成字符串数组 1StringObject.split( char [,howmany]); 希望把单词分割为字母，或者把字符串分割为字符，可使用下面的代码： 1var Arr = &quot;hello&quot;.split(&quot;&quot;) ; //可返回 [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[About my sweetie --Sophia]]></title>
     <url>%2F2018%2F12%2F31%2FAbout-my-sweetie-Sophia%2F</url>
     <content type="text"><![CDATA[Since I see you... At the time of 3 Feb, you met me at the frist sight]]></content>
