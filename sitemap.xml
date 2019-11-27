@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2019-11-26T13:02:52.561Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/11/26/Flex-%E5%B8%83%E5%B1%80/</loc>
+    
+    <lastmod>2019-11-26T12:59:16.047Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
-    <lastmod>2019-11-26T12:49:35.513Z</lastmod>
+    <lastmod>2019-11-26T12:59:11.166Z</lastmod>
     
   </url>
   
@@ -26,13 +40,6 @@
     <loc>http://yoursite.com/2019/11/26/%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81-Debounce-and-throttle/</loc>
     
     <lastmod>2019-11-26T06:55:26.962Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/11/26/Flex-%E5%B8%83%E5%B1%80/</loc>
-    
-    <lastmod>2019-11-26T05:50:56.835Z</lastmod>
     
   </url>
   
@@ -68,13 +75,6 @@
     <loc>http://yoursite.com/schedule/index.html</loc>
     
     <lastmod>2018-12-30T14:01:04.399Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
-    
-    <lastmod>2018-12-30T13:10:08.085Z</lastmod>
     
   </url>
   
